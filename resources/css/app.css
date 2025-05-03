@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --color-primaryB: #0058a8;
+    --color-secondB: #128bc2;
+    --color-primaryYe: #feb914;
+    --color-gris1: #081a3e;
+    --color-gris2: #0b2048;
+    --color-noir: #0f1925;
+    --color-orang: #f47a1f;
+}
+
+/* custom */
+body {
+    font-family: Poppins, Verdana, sans-serif;
+}
+button {
+    cursor: pointer !important;
+}
+
+.nav-menu ul li a {
+    padding: 28px 0;
+}
+
+.nav-active {
+    color: var(--color-primaryB);
+    font-weight: bold;
+    font-family: Poppins, Verdana, sans-serif;
+    border-bottom: 4px solid var(--color-primaryB);
+}
+
+.nav-menu ul li a:hover {
+    color: var(--color-primaryB);
+    border-bottom: 4px solid var(--color-primaryB);
+}
+
+.topbar i {
+    font-weight: bold;
+    color: var(--color-primaryB);
+}
+.topbar a:hover {
+    color: var(--color-primaryB);
+}
+.mobile-info i {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--color-primaryYe);
+}
+.mobile-info span {
+    font-size: 12px;
+}
+.mobile-info a:hover {
+    color: var(--color-primaryB);
+}
+
+.foot .trait {
+    width: 80px;
+    height: 5px;
+    background-image: linear-gradient(
+        90deg,
+        var(--color-primaryYe) 50%,
+        var(--color-primaryB) 50%
+    );
+}
+.foot .network i {
+    font-size: 25px;
+    font-weight: bold;
+}
+.foot .network div {
+    color: #888787;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+    border: 2px solid #888787;
+}
+.foot .network div:hover {
+    background-color: var(--color-primaryB);
+    color: white;
+    border: none;
+}

@@ -1,0 +1,10 @@
+a {
+    text-decoration: none !important;
+}
+
+.profile-img {
+    height: 200px !important;
+    width: 200px !important;
+    object-fit: cover;
+    border: 2px solid #aaa;
+}
