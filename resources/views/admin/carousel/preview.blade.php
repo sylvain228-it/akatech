@@ -6,7 +6,7 @@
 @section('content')
     <div class="owl-carousel owl-theme">
         @foreach ($imagesCarousel as $carousel)
-            @include('carousel-item')
+            @include('admin.layout.inc.carousel-item')
         @endforeach
     </div>
     <hr>

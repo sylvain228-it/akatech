@@ -3,6 +3,7 @@
 namespace App\Traits;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Str;
 
 trait AppUtilityTrait
@@ -35,15 +36,15 @@ trait AppUtilityTrait
             $ext = $file->getClientOriginalExtension();
             $fileName = "media_" . uniqid() . '.' . $ext;
 
-            if ($oldPath != null && $oldPath != "assets/category/category_cover.jpg") {
-                if (file_exists($oldPath)) {
-                    unlink($oldPath);
+            if ($oldPath != null) {
+                if (Storage::disk('public')->exists($oldPath)) {
+                    Storage::disk('public')->delete($oldPath);
                 }
             }
-            $file->move(public_path($path), $fileName);
+            $filePath = $file->storeAs($path, $fileName, 'public');
 
 
-            return $path . '/' . $fileName;
+            return $filePath;
         }
 
         return '';

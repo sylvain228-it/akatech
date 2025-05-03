@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ImageCarouselRequest;
 use App\Models\ImageCarousel;
 use App\Traits\AppUtilityTrait;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ImageCarouselController extends Controller
 {
@@ -39,20 +41,10 @@ class ImageCarouselController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ImageCarouselRequest $request)
     {
 
-        $request->validate([
-            'title' => ['nullable', 'string', 'max:255'],
-            'image' => ['required', 'image', 'mimes:png,jpg,jpeg', 'max:5242880'],
-            'description' => ['nullable', 'string', 'max:255'],
-            'link' => ['nullable', 'string', 'max:255'],
-            'link_text' => ['nullable', 'string', 'max:255'],
-            'link2' => ['nullable', 'string', 'max:255'],
-            'link2_text' => ['nullable', 'string', 'max:255'],
-            'img_pos' => ['nullable', 'string', 'max:255'],
-        ]);
-        $imagePath = $this->uploadFile($request, 'image', 'assets/carousel');
+        $imagePath = $this->uploadFile($request, 'image', 'carousel');
         $imageCarousel = new ImageCarousel();
         $imageCarousel->title = $request->title;
         $imageCarousel->description = $request->description;
@@ -74,39 +66,29 @@ class ImageCarouselController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(ImageCarousel $carousel)
     {
-        $carousel = ImageCarousel::findOrFail($id);
         return view('admin.carousel.show', compact('carousel'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(ImageCarousel $carousel)
     {
-        $carousel = ImageCarousel::findOrFail($id);
         return view('admin.carousel.edit', compact('carousel'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         $imageCarousel = ImageCarousel::findOrFail($id);
-        $request->validate([
-            'title' => ['nullable', 'string', 'max:255'],
-            'image' => ['nullable', 'image', 'mimes:png,jpg,jpeg', 'max:5242880'],
-            'description' => ['nullable', 'string', 'max:255'],
-            'link' => ['nullable', 'string', 'max:255'],
-            'link_text' => ['nullable', 'string', 'max:255'],
-            'link2' => ['nullable', 'string', 'max:255'],
-            'link2_text' => ['nullable', 'string', 'max:255'],
-            'img_pos' => ['nullable', 'string', 'max:255'],
-        ]);
-
-        $imagePath = $this->uploadFile($request, 'image', 'assets/carousel', $imageCarousel->image);
+        $imagePath = "";
+        if ($request->hasFile('image')) {
+            $imagePath = $this->uploadFile($request, 'image', 'carousel', $imageCarousel->image);
+        }
 
         $imageCarousel->title = $request->title;
         $imageCarousel->description = $request->description;
@@ -127,11 +109,11 @@ class ImageCarouselController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         $carousel = ImageCarousel::findOrFail($id);
-        if (file_exists($carousel->image)) {
-            unlink($carousel->image);
+        if (Storage::disk('public')->exists($carousel->image)) {
+            Storage::disk('public')->delete($carousel->image);
         }
         $carousel->delete();
         return to_route('admin.carousel.index')->with('message', "Carousel supprimé avec succès !");

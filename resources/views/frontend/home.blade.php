@@ -3,8 +3,14 @@
     Accueil
 @endsection
 @section('content')
-    @include('frontend.layout.home-banner')
 
+    @if ($imagesCarousel->count() > 0)
+        <div class="owl-carousel owl-theme">
+            @foreach ($imagesCarousel as $carousel)
+                @include('frontend.layout.home-banner')
+            @endforeach
+        </div>
+    @endif
 
     <section class="bg-gray-100 py-12" id="sectionPlants">
         <div class="max-w-7xl mx-auto px-4 text-center">

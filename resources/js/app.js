@@ -45,24 +45,24 @@ $(".class-hide-click").on("click", function (event) {
 });
 
 // owl-carousel
-// $(".owl-carousel").owlCarousel({
-//     loop: true,
-//     margin: 0,
-//     items: 1,
-//     pagination: false,
-//     nav: false,
-//     dots: false,
-//     singleItem: true,
-//     responsive: {
-//         0: {
-//             items: 1,
-//         },
-//     },
-//     autoplay: true,
-//     autoplayTimeout: 3000,
-//     autoplayHoverPause: true,
-//     checkVisibility: false,
-// });
+$(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 0,
+    items: 1,
+    pagination: false,
+    nav: false,
+    dots: false,
+    singleItem: true,
+    responsive: {
+        0: {
+            items: 1,
+        },
+    },
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    checkVisibility: false,
+});
 
 $(".play").on("click", function () {
     owl.trigger("play.owl.autoplay", [1000]);

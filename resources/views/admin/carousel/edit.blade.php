@@ -31,6 +31,12 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Image</label>
+                        <div class="my-2">
+                            <a href="{{ asset('storage/' . $carousel->image) }}">
+                                <img style="height: 150px" class="w-100 object-fit-cover img-fluid"
+                                    src="{{ asset('storage/' . $carousel->image) }}" alt="">
+                            </a>
+                        </div>
                         <input type="file" name="image" class="form-control" id="">
                         @error('image')
                             <span class="text-danger">{{ $message }}</span>

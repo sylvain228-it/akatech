@@ -1,5 +1,5 @@
 <div
-    style="background-image: url('{{ asset($carousel->image) }}'); background-repeat:no-repeat; background-size: {{ 'cover' }}; background-position: 
+    style="background-image: url('{{ asset('storage/' . $carousel->image) }}'); background-repeat:no-repeat; background-size: {{ 'cover' }}; background-position: 
         @if ($carousel->img_pos == 'center' || $carousel->img_pos == 'default') center;
     @else
     {{ $carousel->img_pos }} @endif

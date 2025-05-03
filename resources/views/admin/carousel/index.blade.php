@@ -46,7 +46,7 @@
                                 <td>{{ $item->id }}</td>
                                 <td>{{ $item->title }}</td>
                                 <td>
-                                    <img src="{{ asset($item->image) }}" alt=""
+                                    <img src="{{ asset('storage/' . $item->image) }}" alt=""
                                         style="height: 50px; width:50px; border-radius:50%; object-fit:cover;">
                                 </td>
                                 <td>{{ substr($item->description, 0, 50) }}{{ strlen($item->description) > 50 ? '...' : '' }}
