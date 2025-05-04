@@ -22,7 +22,7 @@ class ImageCarouselRequest extends FormRequest
     public function rules(): array
     {
         $rules = [
-            'title' => ['nullable', 'string', 'max:255'],
+            'title' => ['nullable', 'string', 'max:100'],
             'description' => ['nullable', 'string', 'max:255'],
             'link' => ['nullable', 'string', 'max:255'],
             'link_text' => ['nullable', 'string', 'max:255'],

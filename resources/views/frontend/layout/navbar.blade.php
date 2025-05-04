@@ -1,9 +1,9 @@
 <div class="bg-white z-[777] shadow-xl flex lg:py-0 py-4 items-center justify-between">
-    <a href="{{ url('/') }}" class="lg:ms-7 ms-4">
+    <a href="{{ url('/') }}" class="lg:ms-7 ms-4 me-4">
         <div class="flex gap-2 items-center">
             <img src="{{ asset('assets/logo_bg.png') }}" class="w-[32px] lg:w-[56px] h-[32px] lg:h-[56px] object-cover"
                 alt="">
-            <div>
+            <div class="block sm:hidden xl:block">
 
                 <h5
                     class="mt-0 text-xl font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">
@@ -19,8 +19,8 @@
         <i class="bi bi-list text-gray-800 text-3xl cursor-pointer" id="menu-open"></i>
     </div>
     {{-- fin --}}
-    <nav class="lg:me-24 hidden lg:block ms-auto nav-menu py-7">
-        <ul class="gap-x-7 flex text-black font-[Poppins] uppercase items-center text-[15px]">
+    <nav class="xl:me-24 lg:me-16 hidden lg:block ms-auto nav-menu py-7 w-full">
+        <ul class="gap-x-7 flex text-black font-[600] font-[Poppins] uppercase items-center text-[14px]">
             <li><a href="{{ url('/') }}"
                     class="transition-all duration-300 ease-in-out {{ Request::is('/') ? 'nav-active' : '' }}">Accueil</a>
             </li>

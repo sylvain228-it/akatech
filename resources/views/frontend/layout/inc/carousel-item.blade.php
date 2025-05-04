@@ -5,14 +5,26 @@
     {{ $carousel->img_pos }} @endif
         ;">
     <div class="w-full bg-black/40 p-6 sm:p-10 lg:p-16">
-        <div class="sm:max-w-[90%] lg:max-w-[60%] flex justify-start">
+        <div class="sm:max-w-[90%] xl:max-w-[60%] lg:max-w-[70%] flex justify-start">
             <div class="text-left">
                 <div class="text-white mb-10">
-                    <h1
-                        class="font-bold capitalize text-2xl md:text-4xl font-[verdana] tracking-wide md:leading-13 leading-9">
-                        {{ $carousel->title }}
-                    </h1>
-                    <p class="mt-10 tracking-wide leading-6">{{ $carousel->description }}</p>
+                    <div class="max-h-[270px]">
+                        <h1
+                            class="font-bold capitalize text-2xl md:text-4xl font-[verdana] tracking-wide md:leading-13 leading-9">
+                            {{-- {{ $carousel->title }} --}}
+                            Le soir tombe lentement, enveloppant le monde d’une lumière douce et dorée.
+                        </h1>
+                    </div>
+                    <div class="max-h-[250px]">
+                        <p class="mt-10 tracking-wide leading-6">
+                            {{-- {{ $carousel->description }} --}}
+                            Le soleil se couche lentement sur l’horizon, peignant le ciel de teintes dorées et pourpres.
+                            Les
+                            oiseaux rentrent au nid, tandis que le vent souffle doucement à travers les arbres. Un
+                            instant
+                            de paix, suspendu dans le temps, où tout semble possible.
+                        </p>
+                    </div>
                 </div>
                 @if ($carousel->link != null || $carousel->link2 != null)
                     <div class="flex gap-3 my-8 home-b-link">
