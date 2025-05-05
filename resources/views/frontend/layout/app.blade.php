@@ -21,6 +21,9 @@
     <main class="flex-grow">
         @yield('content')
     </main>
+    {{-- scrollTopBtn --}}
+    <i class="fixed right-10 bottom-10 cursor-pointer px-2 py-1 bi bi-arrow-up-circle-fill text-2xl font-bold rounded-[5px] z-50 bg-primaryB text-white hidden"
+        id="scrollTopBtn"></i>
     @include('frontend.layout.inc.footer')
 
     <script src="{{ asset('OwlCarousel2-2.3.4/owl.carousel.min.js') }}"></script>

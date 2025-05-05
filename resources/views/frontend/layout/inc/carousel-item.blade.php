@@ -4,55 +4,38 @@
     @else
     {{ $carousel->img_pos }} @endif
         ;">
-    <div class="w-full bg-black/40 p-6 sm:p-10 lg:p-16">
-        <div class="sm:max-w-[90%] xl:max-w-[60%] lg:max-w-[70%] flex justify-start">
-            <div class="text-left">
-                <div class="text-white mb-10">
-                    <div class="max-h-[270px]">
-                        <h1
-                            class="font-bold capitalize text-2xl md:text-4xl font-[verdana] tracking-wide md:leading-13 leading-9">
-                            {{-- {{ $carousel->title }} --}}
-                            Le soir tombe lentement, enveloppant le monde d’une lumière douce et dorée.
-                        </h1>
-                    </div>
-                    <div class="max-h-[250px]">
-                        <p class="mt-10 tracking-wide leading-6">
-                            {{-- {{ $carousel->description }} --}}
-                            Le soleil se couche lentement sur l’horizon, peignant le ciel de teintes dorées et pourpres.
-                            Les
-                            oiseaux rentrent au nid, tandis que le vent souffle doucement à travers les arbres. Un
-                            instant
-                            de paix, suspendu dans le temps, où tout semble possible.
-                        </p>
-                    </div>
-                </div>
-                @if ($carousel->link != null || $carousel->link2 != null)
-                    <div class="flex gap-3 my-8 home-b-link">
+    <div class="w-full bg-black/70">
+
+        <div
+            class="text-left flex flex-col sm:max-w-[90%] xl:max-w-[60%] lg:max-w-[70%] justify-start p-6 sm:p-10 lg:p-16 md:h-[500px] h-[450px]">
+            <div class="text-white mb-10">
+                <h1
+                    class="font-bold capitalize text-2xl md:text-4xl font-[verdana] tracking-wide md:leading-13 leading-9">
+                    {{ $carousel->title }}
+                </h1>
+                <p class="mt-10 tracking-wide leading-6">
+                    {{ $carousel->description }}
+                </p>
+            </div>
+            @if ($carousel->link != null || $carousel->link2 != null)
+
+                <div class="mt-auto">
+                    <div class="flex flex-col sm:flex-row gap-3 mt-3 home-b-link">
                         @if ($carousel->link != null)
-                            <a class="transition ease-in-out duration-300 hover:scale-95"
-                                href="{{ $carousel->link }}">{{ $carousel->link_text }}</a>
+                            <div class="inline link1 mt-auto">
+                                <a class="transition ease-in-out duration-300 hover:scale-95"
+                                    href="{{ $carousel->link }}">{{ $carousel->link_text }}</a>
+                            </div>
                         @endif
                         @if ($carousel->link2 != null)
-                            <a class="transition ease-in-out duration-300 hover:scale-95"
-                                href="{{ $carousel->link2 }}">{{ $carousel->link2_text }}</a>
+                            <div class="inline sm:mt-0 link2 mt-6">
+                                <a class="transition ease-in-out duration-300 hover:scale-95"
+                                    href="{{ $carousel->link2 }}">{{ $carousel->link2_text }}</a>
+                            </div>
                         @endif
                     </div>
-                @endif
-            </div>
-            <style>
-                .home-b-link a:first-child {
-                    background-color: var(--color-primaryB);
-                }
-
-                .home-b-link a {
-                    background-color: var(--color-primaryYe);
-                    font-size: 16px;
-                    padding: 10px 14px;
-                    border-radius: 5px;
-                    text-transform: uppercase;
-                    color: white;
-                }
-            </style>
+                </div>
+            @endif
         </div>
     </div>
 </div>

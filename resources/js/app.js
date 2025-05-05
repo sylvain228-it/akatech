@@ -7,19 +7,65 @@ const menuMobile = document.getElementById("menu-mobile");
 const contentOverlay = document.getElementById("content-overlay");
 menuOpen.addEventListener("click", function (event) {
     event.preventDefault();
-    menuMobile.classList.remove("translate-x-full");
-    contentOverlay.classList.remove("-translate-x-full");
+    showMenu();
 });
 
 menuClose.addEventListener("click", function (event) {
     event.preventDefault();
-    menuMobile.classList.add("translate-x-full");
-    contentOverlay.classList.add("-translate-x-full");
+    closeMenu();
 });
 contentOverlay.addEventListener("click", function (event) {
     event.preventDefault();
+    closeMenu();
+});
+document.querySelectorAll("#menu-mobile ul li a").forEach(function (el) {
+    el.addEventListener("click", function (event) {
+        closeMenu();
+    });
+});
+
+function showMenu() {
+    menuMobile.classList.remove("translate-x-full");
+    contentOverlay.classList.remove("-translate-x-full");
+}
+function closeMenu() {
     menuMobile.classList.add("translate-x-full");
     contentOverlay.classList.add("-translate-x-full");
+}
+
+let deviceWidth = window.innerWidth;
+window.addEventListener("resize", function () {
+    deviceWidth = window.innerWidth;
+    if (deviceWidth < 1024) {
+        closeMenu();
+    }
+});
+
+window.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navbar");
+    console.log(window.scrollY);
+    if (window.scrollY > 120) {
+        navbar.classList.add("sticky", "top-0", "shadow-md");
+        navbar.classList.remove("-translate-y-full");
+    } else {
+        navbar.classList.remove("sticky", "top-0", "shadow-md");
+    }
+});
+
+document.getElementById("scrollTopBtn").addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});
+
+window.addEventListener("scroll", () => {
+    const btn = document.getElementById("scrollTopBtn");
+    if (window.scrollY > 200) {
+        btn.classList.remove("hidden");
+    } else {
+        btn.classList.add("hidden");
+    }
 });
 
 // class détail

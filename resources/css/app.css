@@ -90,3 +90,17 @@ button {
     color: white;
     border: none;
 }
+
+/* home banner */
+.home-b-link .link1 a {
+    background-color: var(--color-primaryB);
+}
+
+.home-b-link a {
+    background-color: var(--color-primaryYe);
+    font-size: 16px;
+    padding: 10px 14px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+}
