@@ -12,73 +12,87 @@
         </div>
     @endif
 
-    <section class="bg-gray-100 py-12" id="sectionPlants">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+    <div class="sm:px-24 px-10 py-14 grid grid-cols-1 lg:grid-cols-2 gap-10 bg-gris1 my-20 text-left">
+        <div>
+            <div class="mb-5 flex gap-2 items-center">
+                <div class="h-5 w-5 bg-primaryYe rounded-[100%]"></div>
+                <h3 class="text-gray-600 text-xl font-bold uppercase ">Solutions de
+                    développement
+                    Web</h3>
+            </div>
+            <h3 class="text-2xl font-bold capitalize text-white mb-5 leading-[38px]">Créez votre espace digital sur mesure,
+                pensé
+                pour
+                attirer
+                vos visiteurs
+                et les engager durablement.</h3>
+            <div class="flex gap-3 items-start">
+                <div class="w-3 h-20 bg-primaryYe"></div>
+                <p class="text-gray-200 leading-[28px] m-0">On sera à vos côtés à chaque étape pour créer un site web qui
+                    vous
+                    ressemble vraiment —
+                    un site qui raconte
+                    votre histoire, met en valeur ce qui vous rend unique, et qui marque les esprits dès la première visite.
+                </p>
+            </div>
+        </div>
+        <img data-aos="zoom-in" src="{{ asset('default/akatech_img.jpg') }}"
+            class="w-full rounded-2xl border-b-10 border-r-10 border-white" alt="">
+    </div>
 
-            <section
-                class="bg-yellow-50 py-10 px-6 md:px-20 my-5 flex flex-col md:flex-row items-center justify-between rounded-xl shadow-lg mt-10">
-                <!-- Texte -->
-                <div class="mb-6 md:mb-0 max-w-xl">
-                    <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">
-                        Payez facilement avec TMoney !
-                    </h2>
-                    <p class="text-gray-700 text-lg">
-                        Profitez d’un paiement rapide, sécurisé et sans tracas grâce à notre intégration TMoney. Accessible
-                        à tout moment, où que vous soyez.
+    {{-- qui sommes-nous --}}
+    <div class="px-[20px] md:px-[50px] grid grid-cols-1 lg:grid-cols-3 gap-7">
+        <div class="lg:col-span-1">
+            <div class="flex gap-2 items-center mb-5">
+                <div class="w-25 h-1 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%"></div>
+                <h3 class="text-xl text-primaryB font-bold">Qui sommes nous ?</h3>
+            </div>
+            <h3 class="text-3xl capitalize font-bold my-5">Déjà plus de 4 ans à vos côtés pour vous fournir des <span
+                    class=" text-primaryB">solutions informatiques fiables</span>.</h3>
+            <p class="my-5">Concentrez-vous sur ce que vous faites de mieux, on prend en charge toute votre informatique.
+            </p>
+            <a href="{{ route('about') }}" class="text-[16px] font-medium hover:text-primaryB">En savoir plus</a>
+        </div>
+        <div class="flex flex-col md:flex-row gap-7 w-full lg:col-span-2">
+            <img src="{{ asset('default/dev_1.jpg') }}"
+                class="rounded-2xl border-t-10 border-l-10 border-primaryB w-full max-h-[450px] object-cover shadow-md"
+                alt="">
+            <div>
+                <p>Chez IpsecSecureNET, pas de solutions toutes faites, ni de réponses préconçues ou de forfaits figés.
+
+                    Il y a d’abord vous : votre activité, votre environnement informatique, et surtout vos ambitions.
+
+                    C’est pourquoi, avant toute proposition, nous prenons le temps de vous écouter. Comprendre vos besoins,
+                    vos
+                    attentes et les spécificités de votre marché, c’est ce qui nous permet de construire une solution
+                    vraiment
+                    sur mesure.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sm:px-24 px-10 py-14 grid grid-cols-1 lg:grid-cols-2 gap-10 bg-gray-200 my-20 text-left">
+        <img data-aos="zoom-in" src="{{ asset('default/web_4.jpg') }}"
+            class="w-full rounded-2xl border-t-10 border-l-10 border-gris1" alt="">
+        <div>
+            <h3 class="text-2xl font-bold capitalize text-gris2 mb-5 leading-[38px]">On conçoit votre site web en tenant
+                compte de ce qui compte vraiment pour votre entreprise.</h3>
+            <div class="flex gap-3 items-start">
+                <div class="w-3 h-20 bg-primaryYe"></div>
+                <div>
+                    <p class="text-gray-700 leading-[28px] m-0">De notre première conversation à la maintenance continue de
+                        votre site, nous nous engageons à vous offrir un service attentif et de qualité. Notre priorité :
+                        construire une relation de confiance, transparente et durable, où la communication reste toujours
+                        ouverte.
+                    </p>
+                    <p class="text-gray-700 leading-[28px] mt-1">En comprenant précisément vos besoins et vos attentes,
+                        notre
+                        équipe saura vous guider vers le CMS ou la solution sur mesure la plus en phase avec vos objectifs.
                     </p>
                 </div>
-
-                <div class="flex-shrink-0">
-                    <img src="{{ asset('default/banner.webp') }}" alt="Logo TMoney" class="w-52 md:w-72 object-cover h-auto">
-                </div>
-            </section>
-
-            <section class="my-10 bg-white shadow p-10">
-                <div class="grid my-10 gap-7 grid-cols-1 md:grid-cols-2 items-center">
-                    <i class="bi bi-shield-check text-9xl text-primary"></i>
-                    <div>
-                        <h3 class="text-2xl font-bold">Sécurité</h3>
-                        <p class="text-left mt-2">Tous vos paiements sont 100% sécurisés. Vos informations sont protégées et
-                            traitées en toute
-                            confidentialité via des canaux fiables comme TMoney et Flooz.</p>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="my-10">
-                <h3 class="text-2xl font-bold text-gray-800">Comment ça marche ?</h3>
-                <p class="mt-2">Notre plateforme de paiement local vous permet de régler facilement vos investissements
-                    selon votre
-                    classe (Silver, Gold, Premium) via TMoney ou Flooz, tout en assurant sécurité, transparence et
-                    fiabilité. Gagnez du temps, évitez les fraudes, et contribuez sereinement à la croissance de votre
-                    groupe.</p>
-
-                <div class="grid my-10 gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    <div class="rounded-[8px] shadow p-3">
-                        <i class="bi bi-person-check-fill text-7xl text-blue-600"></i>
-                        <h3 class="text-2xl my-3 font-bold">Créer un Compte</h3>
-                        <p class="mt-2">Remplissez en quelques minutes le formulaire d'inscription. Vous recevrez
-                            immédiatement un email de confirmation contenant le lien
-                            pour acceder à votre interface tableau de bord.</p>
-                    </div>
-                    <div class="rounded-[8px] shadow p-3">
-                        <i class="bi bi-bookmarks text-7xl text-green-600"></i>
-                        <h3 class="text-2xl my-3 font-bold">Sélectionner un plan</h3>
-                        <p class="mt-2">
-                            Une fois accéder à votre interface tableau de bord, clicker sur l'élément du menu <b>Plant
-                                d'investisment</b> et ensuite sélectionner un plant.
-                        </p>
-                    </div>
-                    <div class="rounded-[8px] shadow p-3">
-                        <i class="bi bi-cash text-7xl text-red-600"></i>
-                        <h3 class="text-2xl my-3 font-bold">Envoyer les paiements</h3>
-                        <p class="mt-2">
-                            Une fois le plan est selectionné, clicker sur l'élément du menu <b>Investir</b> et ensuite payer
-                            le montant dû.
-                    </div>
-            </section>
-
+            </div>
         </div>
-    </section>
+
+    </div>
+
 @endsection

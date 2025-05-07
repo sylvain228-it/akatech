@@ -43,7 +43,6 @@ window.addEventListener("resize", function () {
 
 window.addEventListener("scroll", () => {
     const navbar = document.getElementById("navbar");
-    console.log(window.scrollY);
     if (window.scrollY > 120) {
         navbar.classList.add("sticky", "top-0", "shadow-md");
         navbar.classList.remove("-translate-y-full");

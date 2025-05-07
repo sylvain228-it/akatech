@@ -1,12 +1,26 @@
+@php
+    $navbarItems = [
+        //
+        ['title' => 'Accueil', 'route' => 'home'],
+        ['title' => 'A propos', 'route' => 'about'],
+        // ['title' => 'Services', 'route' => 'services'],
+        // ['title' => 'Projets', 'route' => 'projets'],
+        // ['title' => 'Formations', 'route' => 'formation'],
+        // ['title' => 'Boutique', 'route' => 'shop'],
+        // ['title' => 'Blog', 'route' => 'blog'],
+        ['title' => 'Contact', 'route' => 'contact'],
+    ];
+@endphp
+
 <div id="navbar"
     class="bg-white z-[777] px-[20px] md:px-[50px] shadow-md flex lg:py-0 py-4 items-center justify-between transition-all ease-in-out duration-300">
-    <a href="{{ url('/') }}" class="me-[50px]">
+    <a href="{{ route('home') }}" class="me-[50px]">
         <div class="flex gap-2 items-center">
             <img src="{{ asset('assets/logo_bg.png') }}" class="w-[32px] lg:w-[56px] h-[32px] lg:h-[56px] object-cover"
                 alt="">
 
             <h5
-                class="mt-0 text-xl font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">
+                class="mt-0 text-[20px] font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">
                 AKATE</h5>
         </div>
     </a>
@@ -18,30 +32,11 @@
 
     <nav class="hidden lg:block ms-auto nav-menu py-7">
         <ul class="gap-x-7 flex text-black font-[600] font-[Poppins] uppercase items-center text-[14px]">
-            <li><a href="{{ url('/') }}"
-                    class="transition-all duration-300 ease-in-out {{ Request::is('/') ? 'nav-active' : '' }}">Accueil</a>
-            </li>
-            <li><a href="{{ route('about') }}"
-                    class="transition-all duration-300 ease-in-out {{ Request::is('about') ? 'nav-active' : '' }}">A
-                    propos</a></li>
-            <li><a href="#"
-                    class="transition-all duration-300 ease-in-out {{ Request::is('services') ? 'nav-active' : '' }}">Services</a>
-            </li>
-            <li><a href="#"
-                    class="transition-all duration-300 ease-in-out {{ Request::is('portfolio') ? 'nav-active' : '' }}">Portfolio</a>
-            </li>
-            <li><a href="#"
-                    class="transition-all duration-300 ease-in-out {{ Request::is('formations') ? 'nav-active' : '' }}">Formations</a>
-            </li>
-            <li class="xl:block hidden"><a href="#"
-                    class="transition-all duration-300 ease-in-out {{ Request::is('shop') ? 'nav-active' : '' }}">Boutique</a>
-            </li>
-            <li><a href="#"
-                    class="transition-all duration-300 ease-in-out {{ Request::is('blog') ? 'nav-active' : '' }}">Blog</a>
-            </li>
-            <li><a href="#"
-                    class="transition-all duration-300 ease-in-out {{ Request::is('contact') ? 'nav-active' : '' }}">Contact</a>
-            </li>
+            @foreach ($navbarItems as $item)
+                <li><a href="{{ route($item['route']) }}"
+                        class="transition-all duration-300 ease-in-out {{ Request::is($item['route'] == 'home' ? '/' : $item['route']) ? 'nav-active' : '' }}">{{ $item['title'] }}</a>
+                </li>
+            @endforeach
             @guest
                 <li class="xl:block hidden"><a href="{{ route('login') }}"
                         class="transition-all duration-300 ease-in-out">Se
@@ -91,28 +86,11 @@
         <i class="bi bi-x-circle text-3xl m-3 cursor-pointer text-red-400" id="menu-close"></i>
     </div>
     <ul class="uppercase gap-y-4 flex flex-col my-5 px-14 text-left">
-        <li class=""><a href="{{ url('/') }}"
-                class="{{ Request::is('/') ? 'nav-active' : '' }}">Accueil</a>
-        </li>
-
-        <li class=""><a href="{{ route('about') }}" class=" {{ Request::is('about') ? 'nav-active' : '' }}">A
-                propos</a>
-        </li>
-        <li class=""><a href="#" class=" {{ Request::is('services') ? 'nav-active' : '' }}">Services</a>
-        </li>
-        <li class=""><a href="#" class=" {{ Request::is('portfolio') ? 'nav-active' : '' }}">Portfolio</a>
-        </li>
-        <li class=""><a href="#"
-                class=" {{ Request::is('formations') ? 'nav-active' : '' }}">Formations</a>
-        </li>
-        <li class=""><a href="#" class=" {{ Request::is('shop') ? 'nav-active' : '' }}">Boutique</a>
-        </li>
-        <li class=""><a href="#" class=" {{ Request::is('blog') ? 'nav-active' : '' }}">Blog</a>
-        </li>
-        <li class=""><a href="{{ route('contact') }}"
-                class=" {{ Request::is('contact') ? 'nav-active' : '' }}">Contact</a>
-        </li>
-
+        @foreach ($navbarItems as $item)
+            <li class=""><a href="{{ route($item['route']) }}"
+                    class="{{ Request::is($item['route'] == 'home' ? '/' : $item['route']) ? 'nav-active' : '' }}">{{ $item['title'] }}</a>
+            </li>
+        @endforeach
         @guest
             <li class="mt-3 w-full"><a
                     class="text-[15px] w-full rounded-[8px]  {{ Request::is('login') ? 'nav-active' : '' }} cursor-pointer uppercase  transition-all duration-300 ease-in-out border-2 border-primaryB bg-transparent px-3 py-2"
@@ -170,22 +148,24 @@
 </div>
 
 
-<script>
-    const menuMobile = document.getElementById("menu-mobile");
-    const contentOverlay = document.getElementById("content-overlay");
-    if (window.innerWidth > 768) {
+@auth
+    <script>
+        const menuMobile = document.getElementById("menu-mobile");
+        const contentOverlay = document.getElementById("content-overlay");
+        if (window.innerWidth > 768) {
 
-        const btn = document.getElementById('dropdownBtn');
-        const menu = document.getElementById('dropdownMenu');
+            const btn = document.getElementById('dropdownBtn');
+            const menu = document.getElementById('dropdownMenu');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
 
-        window.addEventListener('click', function(e) {
-            if (!btn.contains(e.target) && !menu.contains(e.target)) {
-                menu.classList.add('hidden');
-            }
-        });
-    }
-</script>
+            window.addEventListener('click', function(e) {
+                if (!btn.contains(e.target) && !menu.contains(e.target)) {
+                    menu.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+@endauth

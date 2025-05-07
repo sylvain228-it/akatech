@@ -18,9 +18,10 @@ Route::group(['prefix' => 'client', 'middleware' => ['auth', 'verified']], funct
     Route::get('/guides', [ProfileController::class, 'guides'])->name('guides');
 });
 
-Route::get('/', [FrontendController::class, 'index'])->name('about');
+Route::get('/', [FrontendController::class, 'index'])->name('home');
 Route::get('about', [FrontendController::class, 'about'])->name('about');
 Route::get('plants', [FrontendController::class, 'plants'])->name('plants.liste');
+Route::post('/newsletter', [FrontendController::class, 'newsletter'])->name('newsletter.save');
 
 Route::get('contact', [ContactController::class, 'contact'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store']);

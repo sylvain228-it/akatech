@@ -1,4 +1,4 @@
-<div class="foot bg-gris1 flex flex-col tracking-[1px] px-[20px] md:px-[50px]">
+<div class="foot mx-auto bg-gris1 flex flex-col tracking-[1px] px-[20px] md:px-[50px]">
     <div class="text-gray-300 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 justify-between items-start p-5">
         <div class="order-last md:order-first">
             <a href="{{ url('/') }}" class="mb-3">
@@ -8,10 +8,10 @@
 
                         <h5
                             class="mt-0 text-xl font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">
-                            Technologies</h5>
+                            AKA</h5>
                         <h3
                             class="text-xl font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryB to-primaryYe">
-                            Avancées</h3>
+                            Technologies</h3>
                     </div>
                 </div>
 
