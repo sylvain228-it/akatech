@@ -1,5 +1,5 @@
-<div class="foot mx-auto bg-gris1 flex flex-col tracking-[1px] px-[20px] md:px-[50px]">
-    <div class="text-gray-300 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 justify-between items-start p-5">
+<div class="foot mx-auto bg-gris1 flex flex-col tracking-[1px] px-5 md:px-20">
+    <div class="text-gray-300 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 justify-between items-start py-5">
         <div class="order-last md:order-first">
             <a href="{{ url('/') }}" class="mb-3">
                 <div class="flex gap-2 items-center">
@@ -47,7 +47,7 @@
                 <li><a href="{{ route('about') }}" class="hover:text-white">Boutique</a></li>
             </ul>
         </div>
-        <div class="text-gray-300">
+        <div class="text-gray-300 mb-5">
             <div class="mb-3">
                 <h3 class="text-2xl text-gray-300 mb-2 font-medium">Nos Contacts</h3>
                 <div class="trait"></div>
@@ -74,7 +74,7 @@
             </p>
         </div>
     </div>
-    <div class="text-center bg-gris2 flex items-center justify-center p-3">
+    <div class="text-center bg-gris2 flex items-center justify-center py-3">
         <p class="text-center text-gray-300 text-[12px]">Copyright@ <b class="uppercase">AKA Technologies</b> - <i>Tout
                 droit réservé</i> |
             {{ date('d-m-Y') }}</p>

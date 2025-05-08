@@ -13,8 +13,8 @@
 @endphp
 
 <div id="navbar"
-    class="bg-white z-[777] px-[20px] md:px-[50px] shadow-md flex lg:py-0 py-4 items-center justify-between transition-all ease-in-out duration-300">
-    <a href="{{ route('home') }}" class="me-[50px]">
+    class="bg-white z-[777] px-5 md:px-20 shadow-md flex lg:py-0 py-4 items-center justify-between transition-all ease-in-out duration-300">
+    <a href="{{ route('home') }}" class="me-5">
         <div class="flex gap-2 items-center">
             <img src="{{ asset('assets/logo_bg.png') }}" class="w-[32px] lg:w-[56px] h-[32px] lg:h-[56px] object-cover"
                 alt="">
@@ -25,7 +25,7 @@
         </div>
     </a>
     {{-- menu open --}}
-    <div class="lg:hidden mx-4">
+    <div class="lg:hidden">
         <i class="bi bi-list text-gray-800 text-3xl cursor-pointer" id="menu-open"></i>
     </div>
     {{-- fin --}}

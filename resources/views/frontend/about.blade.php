@@ -8,8 +8,8 @@
     @endphp
     @include('frontend.layout.inc.banner')
     <section class="bg-gray-100 min-h-screen py-12">
-        <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div class="order-last md:order-first">
+        <div class="md:px-20 px-5 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div class="order-last md:order-first flex flex-col h-full">
                 <h1 class="text-4xl font-bold text-primaryB mb-6">Qui sommes-nous ?</h1>
                 <p class="text-gray-700 text-lg mb-4 leading-[30px]">
                     Chez <span
@@ -18,15 +18,16 @@
                     de vos idées. C’est pourquoi nous avons créé une structure dédiée à vous accompagner dans tous vos
                     projets digitaux, que vous soyez une entreprise, une association ou un indépendant.
                 </p>
-
+                <div class="w-full mt-auto h-2 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
+                </div>
             </div>
 
             <div class="text-center">
-                <img src="{{ asset('default/web_3.jpg') }}" alt="À propos" class="rounded-xl shadow-md mx-auto">
+                <img src="{{ asset('default/web_3.jpg') }}" alt="À propos" class="rounded-xl shadow-md w-full">
             </div>
         </div>
 
-        <div class="mx-auto px-20 my-10">
+        <div class="mx-auto px-5 md:px-20 my-20">
             <h3 class="text-2xl font-bold mt-4 mb-5 text-gris1 ">Ce que nous faisons :</h3>
             <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
                 <div
@@ -84,12 +85,12 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-1 my-20 gap-10 lg:grid-cols-2 px-3 sm:px-20">
+        <div class="grid grid-cols-1 my-20 gap-10 lg:grid-cols-2 px-5 md:px-20">
             <div>
                 <h3 class="text-2xl font-bold mb-2 text-primaryB">Pourquoi nous choisir ?</h3>
                 <div class="flex gap-2 items-start">
                     <i class="bi bi-check-circle text-primaryYe font-bold text-xl"></i>
-                    <p class=" leading-[28px] mb-2">Parce qu’on aime ce qu’on fait, et qu’on le fait bien. On vous écoute,
+                    <p class="leading-[28px] mb-2">Parce qu’on aime ce qu’on fait, et qu’on le fait bien. On vous écoute,
                         on
                         vous
                         conseille, et surtout, on
@@ -119,4 +120,43 @@
                 class="rounded-2xl border-t-10 border-l-10 border-primaryYe w-full" alt="">
         </div>
     </section>
+    <section class="my-20">
+        <div class="flex flex-col justify-center mb-10 ">
+            <h4 class="text-3xl text-primaryB font-bold uppercase text-center">Nos technologies</h4>
+            <div
+                class="mx-auto w-[20%] mt-3 h-2 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
+            </div>
+        </div>
+        @include('frontend.layout.inc.tech-icons')
+    </section>
+@endsection
+
+
+@section('script')
+    <script>
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 0,
+            items: 6,
+            pagination: false,
+            nav: false,
+            dots: false,
+            singleItem: true,
+            responsive: {
+                0: {
+                    items: 3,
+                },
+                600: {
+                    items: 4,
+                },
+                1024: {
+                    items: 6,
+                }
+
+            },
+            autoplay: true,
+            autoplayTimeout: 2500,
+            checkVisibility: false,
+        });
+    </script>
 @endsection

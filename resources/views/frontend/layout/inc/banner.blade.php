@@ -1,5 +1,5 @@
 <div class=" bg-banner">
-    <div class=" bg-primaryB/60 w-full h-[300px] flex items-center justify-center">
+    <div class=" bg-black/60 w-full h-[300px] flex items-center justify-center">
         <div class="text-center">
             <h3 class="text-2xl text-white font-bold font-[verdana] uppercase">{{ $title }}</h3>
         </div>

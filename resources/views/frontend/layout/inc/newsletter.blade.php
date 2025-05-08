@@ -1,5 +1,5 @@
 <div data-aos="zoom-down"
-    class="bg-primaryB sm:px-24 px-10 py-14 sm:py-18 grid grid-cols-1 md:grid-cols-2 gap-7 text-white items-center">
+    class="bg-primaryB sm:px-24 px-5 py-14 sm:py-18 grid grid-cols-1 md:grid-cols-2 gap-7 text-white items-center">
     <h3 class="text-2xl font-bold">Abonnez-vous à notre newsletter
         pour obtenir nos dernières mises à jour</h3>
     <div class=" bg-white">
