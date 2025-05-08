@@ -43,7 +43,7 @@
     {{-- qui sommes-nous --}}
     <section class="my-32">
         <div class="px-5 md:px-[50px] grid grid-cols-1 lg:grid-cols-3 gap-7">
-            <div data-aos="fade-right" class="lg:col-span-1">
+            <div data-aos="zoom-in" class="lg:col-span-1">
                 <div class="flex gap-2 items-center mb-5">
                     <div
                         class="w-16 sm:w-20 h-1 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
@@ -60,10 +60,10 @@
                     plus</a>
             </div>
             <div class="flex flex-col md:flex-row gap-7 w-full lg:col-span-2">
-                <img data-aos="zoom-out" src="{{ asset('default/dev_1.jpg') }}"
+                <img data-aos="zoom-in" src="{{ asset('default/dev_1.jpg') }}"
                     class="rounded-2xl border-t-10 border-l-10 border-primaryB w-full max-h-[400px] object-cover shadow-md"
                     alt="">
-                <div data-aos="fade-right" class="leading-[30px]">
+                <div data-aos="zoom-in" class="leading-[30px]">
                     <p class="tracking-wider mb-4">Chez <span
                             class="text-[20px] font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">AKATE</span>,
                         pas de solutions toutes faites, ni de réponses préconçues ou de forfaits figés.</p>

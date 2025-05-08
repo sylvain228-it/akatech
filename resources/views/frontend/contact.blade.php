@@ -79,7 +79,7 @@
         <div class="-mt-20 w-full">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-7 px-5 md:px-20 justify-center">
 
-                <div class="c-card" data-aos="fade-right">
+                <div class="c-card" data-aos="zoom-in">
                     <div
                         class="p-5 h-[300px] w-full bg-gris1/60 rounded-[20px] text-white flex flex-col items-center justify-center">
                         <div
@@ -109,7 +109,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="c-card" data-aos="zoom-out">
+                <div class="c-card" data-aos="zoom-in">
                     <div
                         class="p-5 h-[300px] w-full bg-gris1/60 rounded-[20px] text-white flex flex-col items-center justify-center">
                         <div
