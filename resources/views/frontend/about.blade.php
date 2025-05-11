@@ -10,7 +10,7 @@
     <section class="bg-gray-100 min-h-screen py-12">
         <div class="md:px-20 px-5 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div class="order-last md:order-first flex flex-col h-full">
-                <h1 class="text-4xl font-bold text-primaryB mb-6">Qui sommes-nous ?</h1>
+                <h1 class="text-3xl font-bold text-primaryB mb-6">Qui sommes-nous ?</h1>
                 <p class="text-gray-700 text-lg mb-4 leading-[30px]">
                     Chez <span
                         class="text-[20px] font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">AKATE</span>,
@@ -18,11 +18,12 @@
                     de vos idées. C’est pourquoi nous avons créé une structure dédiée à vous accompagner dans tous vos
                     projets digitaux, que vous soyez une entreprise, une association ou un indépendant.
                 </p>
-                <div class="w-full mt-auto h-2 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
+                <div
+                    class="w-full hidden md:block mt-auto h-2 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
                 </div>
             </div>
 
-            <div class="text-center">
+            <div data-aos="zoom-in" class="text-center">
                 <img src="{{ asset('default/web_3.jpg') }}" alt="À propos" class="rounded-xl shadow-md w-full">
             </div>
         </div>

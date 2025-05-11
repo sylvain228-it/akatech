@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdminRoleController;
 use App\Http\Controllers\Admin\ImageCarouselController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\UsersController;
 use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['guest:admin'], 'prefix' => 'tech-admin', 'as' => 'admin.'], function () {
@@ -21,6 +22,7 @@ Route::group(['middleware' => ['auth:admin', 'auth.admin', 'role:admin'], 'prefi
 
     Route::get('carousel-preview', [ImageCarouselController::class, 'preview'])->name('carousel.preview');
     Route::resource('carousel', ImageCarouselController::class);
+    Route::resource('services', ServicesController::class);
 
 
     Route::get('users', [UsersController::class, 'liste'])->name('users.liste');

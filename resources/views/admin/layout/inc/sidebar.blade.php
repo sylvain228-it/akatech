@@ -2,6 +2,7 @@
 $navbarItems = [
     // ['title' => 'Catégories', 'items' => [['title' => 'Liste', 'route' => 'admin.categories.index', 'icon' => '']]]
     ['title' => 'Carousel', 'items' => [['title' => 'Carousels', 'route' => 'admin.carousel.index', 'icon' => '']]],
+    ['title' => 'Service', 'items' => [['title' => 'Services', 'route' => 'admin.services.index', 'icon' => '']]],
 ];
 ?>
 

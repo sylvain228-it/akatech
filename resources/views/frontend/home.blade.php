@@ -1,6 +1,14 @@
 @extends('frontend.layout.app')
+
 @section('title')
     Accueil
+@endsection
+@section('meta')
+    <meta property="og:title" content="Solutions de développement Web">
+    <meta property="og:description"
+        content="{{ Str::limit(strip_tags('Créez votre espace digital sur mesure, pensé pour attirer vos visiteurs et les engager durablement.'), 150) }}">
+    <meta property="og:image" content="{{ asset('default/akatech_img.jpg') }}">
+    <meta property="og:url" content="{{ url()->current() }}">
 @endsection
 @section('content')
 
@@ -79,7 +87,8 @@
                         attentes et les spécificités de votre marché, c’est ce qui nous permet de construire une solution
                         vraiment
                         sur mesure.</p>
-                    <div class="w-full h-2 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
+                    <div
+                        class="w-full hidden md:block h-2 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
                     </div>
                 </div>
             </div>
@@ -87,7 +96,7 @@
     </section>
 
     {{-- nos services --}}
-    <section class="my-32">
+    <section class="my-32 px-5 md:px-20">
         <div class="flex gap-1 items-center justify-center mb-3">
             <div class="w-10 h-1 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
             </div>
@@ -96,7 +105,7 @@
             <div class="w-10 h-1 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
             </div>
         </div>
-        <p class="text-center capitalize font-medium text-[28px]">Des prestations personnalisées <br> pour répondre aux
+        <p class="text-center capitalize font-medium text-[25px]">Des prestations personnalisées <br> pour répondre aux
             besoins
             de
             votre entreprise</p>
@@ -139,8 +148,9 @@
                 display: inherit;
             }
         </style>
-        <div class="mt-10 px-5 md:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 justify-center items-start">
-            <div class="sev1 sevss shadow-md rounded-[16px] cursor-pointer transition duration-300 transform">
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 justify-center items-start">
+            <div data-aos="zoom-in"
+                class="sev1 sevss shadow-md rounded-[16px] cursor-pointer transition duration-300 transform">
                 <div class="ser-overlay flex flex-col">
                     <div class="caption mt-auto text-white transition-all duration-300">
                         <h3 class="uppercase text-[16px] text-white mb-4">Aka Technologies</h3>
@@ -163,7 +173,7 @@
                     </div>
                 </div>
             </div>
-            <div class="sev2 sevss shadow-md rounded-[16px] cursor-pointer">
+            <div data-aos="zoom-in" class="sev2 sevss shadow-md rounded-[16px] cursor-pointer">
                 <div class="ser-overlay flex flex-col">
                     <div class="caption mt-auto text-white">
                         <h3 class="uppercase text-[16px] text-white mb-4">Aka Technologies</h3>
@@ -183,7 +193,7 @@
                     </div>
                 </div>
             </div>
-            <div class="sev3 sevss shadow-md rounded-[16px] cursor-pointer">
+            <div data-aos="zoom-in" class="sev3 sevss shadow-md rounded-[16px] cursor-pointer">
                 <div class="ser-overlay flex flex-col">
                     <div class="caption mt-auto text-white">
                         <h3 class="uppercase text-[16px] mb-4">Aka Technologies</h3>
