@@ -1,3 +1,16 @@
+@php
+    $footerNavItems = [
+        //
+        ['title' => 'Accueil', 'route' => 'home'],
+        ['title' => 'A propos', 'route' => 'about'],
+        ['title' => 'Services', 'route' => 'services'],
+        // ['title' => 'Projets', 'route' => 'projets'],
+        // ['title' => 'Formations', 'route' => 'formation'],
+        // ['title' => 'Boutique', 'route' => 'shop'],
+        // ['title' => 'Blog', 'route' => 'blog'],
+        ['title' => 'Contact', 'route' => 'contact'],
+    ];
+@endphp
 <div class="foot mx-auto bg-gris1 flex flex-col tracking-[1px] px-5 md:px-20">
     <div class="text-gray-300 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 justify-between items-start py-5">
         <div class="order-last md:order-first">
@@ -40,11 +53,11 @@
                 <div class="trait"></div>
             </div>
             <ul class="flex flex-col gap-3 text-gray-300">
-                <li><a href="{{ route('about') }}" class="hover:text-white">A propos</a></li>
-                <li><a href="{{ route('about') }}" class="hover:text-white">Services</a></li>
-                <li><a href="{{ route('about') }}" class="hover:text-white">Portfolio</a></li>
-                <li><a href="{{ route('about') }}" class="hover:text-white">Formations</a></li>
-                <li><a href="{{ route('about') }}" class="hover:text-white">Boutique</a></li>
+                @foreach ($footerNavItems as $item)
+                    <li><a href="{{ route($item['route']) }}"
+                            class="transition-all duration-300 ease-in-out hover:text-white {{ Request::is($item['route'] == 'home' ? '/' : $item['route']) ? 'nav-active' : '' }}">{{ $item['title'] }}</a>
+                    </li>
+                @endforeach
             </ul>
         </div>
         <div class="text-gray-300 mb-5">

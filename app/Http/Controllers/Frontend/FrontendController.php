@@ -7,6 +7,7 @@ use App\Models\Admin;
 use App\Models\Classe;
 use App\Models\ImageCarousel;
 use App\Models\Newsletter;
+use App\Models\Service;
 use App\Notifications\NotifyAdmin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -17,12 +18,18 @@ class FrontendController extends Controller
 {
     public function index()
     {
+        $services = Service::orderByDesc('created_at')->take(3)->get();
         $imagesCarousel = ImageCarousel::orderByDesc('created_at')->get();
-        return view('frontend.home', compact('imagesCarousel'));
+        return view('frontend.home', compact('imagesCarousel', 'services'));
     }
     public function about()
     {
         return view('frontend.about');
+    }
+    public function services()
+    {
+        $services = Service::orderByDesc('created_at')->get();
+        return view('frontend.services', compact('services'));
     }
 
     public function newsletter(Request $request)

@@ -71,7 +71,7 @@
                 <img data-aos="zoom-in" src="{{ asset('default/dev_1.jpg') }}"
                     class="rounded-2xl border-t-10 border-l-10 border-primaryB w-full max-h-[400px] object-cover shadow-md"
                     alt="">
-                <div data-aos="zoom-in" class="leading-[30px]">
+                <div data-aos="zoom-in" class="leading-[30px] flex flex-col">
                     <p class="tracking-wider mb-4">Chez <span
                             class="text-[20px] font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">AKATE</span>,
                         pas de solutions toutes faites, ni de réponses préconçues ou de forfaits figés.</p>
@@ -88,7 +88,7 @@
                         vraiment
                         sur mesure.</p>
                     <div
-                        class="w-full hidden md:block h-2 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
+                        class="w-full mt-auto hidden md:block h-2 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
                     </div>
                 </div>
             </div>
@@ -109,108 +109,32 @@
             besoins
             de
             votre entreprise</p>
-        <style>
-            .sev1 {
-                background: url("{{ asset('default/banner.webp') }}") no-repeat center/cover;
-                border-radius: 16px;
-            }
 
-            .sev2 {
-                background: url("{{ asset('default/web_3.jpg') }}") no-repeat center/cover;
-                border-radius: 16px;
-            }
-
-            .sev3 {
-                background: url("{{ asset('default/web_1.jpg') }}") no-repeat center/cover;
-                border-radius: 16px;
-            }
-
-            .ser-overlay {
-                background-color: rgba(0, 0, 0, 0.6);
-                height: 500px;
-                padding: 30px;
-                transition-duration: 2s;
-            }
-
-            .ser-overlay:hover {
-                background-color: #0058a8CD;
-            }
-
-            .sevss:hover .ser-overlay .caption {
-                margin-top: inherit;
-            }
-
-            .sevss .hidden-cap {
-                display: none;
-            }
-
-            .sevss:hover .ser-overlay .hidden-cap {
-                display: inherit;
-            }
-        </style>
         <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 justify-center items-start">
-            <div data-aos="zoom-in"
-                class="sev1 sevss shadow-md rounded-[16px] cursor-pointer transition duration-300 transform">
-                <div class="ser-overlay flex flex-col">
-                    <div class="caption mt-auto text-white transition-all duration-300">
-                        <h3 class="uppercase text-[16px] text-white mb-4">Aka Technologies</h3>
-                        <h2 class=" capitalize text-2xl font-bold">{{ substr('Création de site web et mobile', 0, 40) }}...
-                        </h2>
-                        <div class="my-3 hidden-cap">
-                            <p class="font-medium leading-[26px] mb-5">Nous réalisons des sites internet modernes, clairs et
-                                adaptés à tous les
-                                écrans. Que vous
-                                ayez
-                                besoin d’un site vitrine, d’une boutique en ligne ou d’un espace personnalisé, on s’occupe
-                                de
-                                tout – du design à la mise en ligne.</p>
-                            <div
-                                class="px-5 py-2 mt-8 font-medium flex flex-col items-center hover:scale-90 text-[20px] hover:bg-primaryYe hover:text-primaryB transition duration-300 bg-white text-black">
-                                <a href="#" class="">Détails
-                                    <i class="bi bi-arrow-right-short text-2xl"></i></a>
+            @foreach ($services as $item)
+                <div data-aos="zoom-in"
+                    style="background-image: url(<?= asset('storage/' . $item->cover) ?>); background-repeat: no-repeat; background-position: center; background-size: cover;"
+                    class="sevss shadow-md rounded-[16px] cursor-pointer transition duration-300 transform">
+                    <div class="ser-overlay flex flex-col">
+                        <div class="caption mt-auto text-white transition-all duration-300">
+                            <h3 class="uppercase text-[16px] text-white mb-4">Aka Technologies</h3>
+                            <h2 class=" capitalize text-2xl font-bold">
+                                {{ substr($item->title, 0, 40) }}{{ strlen($item->title) > 40 ? '...' : '' }}
+                            </h2>
+                            <div class="my-3 hidden-cap">
+                                <p class="font-medium leading-[26px] mb-5">
+                                    {{ substr($item->description, 0, 150) }}{{ strlen($item->description) > 150 ? '...' : '' }}
+                                </p>
+                                <div
+                                    class="px-5 py-2 mt-8 font-medium flex flex-col items-center hover:scale-90 text-[20px] hover:bg-primaryYe hover:text-primaryB transition duration-300 bg-white text-black">
+                                    <a href="#" class="">Détails
+                                        <i class="bi bi-arrow-right-short text-2xl"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div data-aos="zoom-in" class="sev2 sevss shadow-md rounded-[16px] cursor-pointer">
-                <div class="ser-overlay flex flex-col">
-                    <div class="caption mt-auto text-white">
-                        <h3 class="uppercase text-[16px] text-white mb-4">Aka Technologies</h3>
-                        <h2 class=" capitalize text-2xl font-bold">
-                            {{ substr("Sécurité des systémes d'informations", 0, 40) }}...</h2>
-
-                        <div class="my-3 hidden-cap">
-                            <p class="font-medium leading-[26px] mb-5">Vos données sont précieuses. On vous aide à les
-                                protéger avec des solutions adaptées : sauvegardes, antivirus, pare-feu, audits de sécurité…
-                                Vous travaillez l’esprit tranquille, on veille au reste.</p>
-                            <div
-                                class="px-5 py-2 mt-8 font-medium flex flex-col items-center hover:scale-90 text-[20px] hover:bg-primaryYe hover:text-primaryB transition duration-300 bg-white text-black">
-                                <a href="#" class="">Détails
-                                    <i class="bi bi-arrow-right-short text-2xl"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="zoom-in" class="sev3 sevss shadow-md rounded-[16px] cursor-pointer">
-                <div class="ser-overlay flex flex-col">
-                    <div class="caption mt-auto text-white">
-                        <h3 class="uppercase text-[16px] mb-4">Aka Technologies</h3>
-                        <h2 class=" capitalize text-2xl font-bold">{{ substr('Conseption de graphique', 0, 40) }}...</h2>
-                        <div class="my-3 hidden-cap">
-                            <p class="font-medium leading-[26px] mb-5">Vous avez besoin de flyers, affiches, bannières ou
-                                contenus visuels pour vos réseaux ? On vous propose des créations originales et percutantes,
-                                prêtes à capter l’attention.</p>
-                            <div
-                                class="px-5 py-2 mt-8 font-medium flex flex-col items-center hover:scale-90 text-[20px] hover:bg-primaryYe hover:text-primaryB transition duration-300 bg-white text-black">
-                                <a href="#" class="">Détails
-                                    <i class="bi bi-arrow-right-short text-2xl"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
 

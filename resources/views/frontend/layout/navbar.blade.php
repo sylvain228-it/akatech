@@ -3,7 +3,7 @@
         //
         ['title' => 'Accueil', 'route' => 'home'],
         ['title' => 'A propos', 'route' => 'about'],
-        // ['title' => 'Services', 'route' => 'services'],
+        ['title' => 'Services', 'route' => 'services'],
         // ['title' => 'Projets', 'route' => 'projets'],
         // ['title' => 'Formations', 'route' => 'formation'],
         // ['title' => 'Boutique', 'route' => 'shop'],

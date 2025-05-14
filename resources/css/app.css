@@ -18,6 +18,15 @@
     --color-orang: #f47a1f;
 }
 
+/* class reutilisable */
+.btn {
+    @apply px-4 py-3 bg-primaryB text-white rounded hover:bg-primaryYe hover:text-black transition-all duration-300 hover:scale-90;
+}
+
+.btn-outline {
+    @apply px-4 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-50;
+}
+
 /* custom */
 body {
     font-family: Poppins, Verdana, sans-serif;
@@ -106,3 +115,33 @@ button {
 }
 
 /* serv */
+
+.ser-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 500px;
+    padding: 30px;
+    transition-duration: 2s;
+}
+
+.ser-overlay:hover {
+    background-color: #0058a8cd;
+}
+
+.sevss:hover .ser-overlay .caption {
+    margin-top: inherit;
+}
+
+.sevss .hidden-cap {
+    display: none;
+}
+
+.sevss:hover .ser-overlay .hidden-cap {
+    display: inherit;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+    .sevss .hidden-cap {
+        display: block;
+    }
+}
