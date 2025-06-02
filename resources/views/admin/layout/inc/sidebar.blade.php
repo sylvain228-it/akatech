@@ -1,8 +1,8 @@
 <?php
 $navbarItems = [
-    // ['title' => 'Catégories', 'items' => [['title' => 'Liste', 'route' => 'admin.categories.index', 'icon' => '']]]
-    ['title' => 'Carousel', 'items' => [['title' => 'Carousels', 'route' => 'admin.carousel.index', 'icon' => '']]],
-    ['title' => 'Service', 'items' => [['title' => 'Services', 'route' => 'admin.services.index', 'icon' => '']]],
+    ['title' => 'Carousel', 'route' => 'admin.carousel.index', 'icon'=>''],
+    ['title' => 'Services', 'route' => 'admin.services.index', 'icon'=>''],
+    ['title' => 'Teams', 'route' => 'admin.teams.index','icon'=>''],
 ];
 ?>
 
@@ -17,9 +17,7 @@ $navbarItems = [
             <hr>
             {{-- navitems --}}
             @foreach ($navbarItems as $item)
-                @foreach ($item['items'] as $elem)
-                    <a class="nav-link" href="{{ route($elem['route']) }}">{{ $elem['title'] }}</a>
-                @endforeach
+                <a class="nav-link" href="{{ route($item['route']) }}">{{ $item['title'] }}</a>
             @endforeach
 
         </div>

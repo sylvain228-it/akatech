@@ -136,6 +136,9 @@
                 </div>
             @endforeach
         </div>
+        <div class="my-10 flex justify-center">
+            <a href="{{ route('services') }}" class="btn uppercase font-medium">Voir tous nos services</a>
+        </div>
     </section>
 
     <section class="my-32">

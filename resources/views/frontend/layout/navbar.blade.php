@@ -37,12 +37,12 @@
                         class="transition-all duration-300 ease-in-out {{ Request::is($item['route'] == 'home' ? '/' : $item['route']) ? 'nav-active' : '' }}">{{ $item['title'] }}</a>
                 </li>
             @endforeach
-            @guest
+            {{-- @guest
                 <li class="xl:block hidden"><a href="{{ route('login') }}"
                         class="transition-all duration-300 ease-in-out">Se
                         connecter</a>
                 </li>
-            @endguest
+            @endguest --}}
             @auth
 
                 <div class="relative inline-block text-left">
