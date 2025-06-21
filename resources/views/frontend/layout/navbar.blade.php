@@ -21,7 +21,7 @@
 
             <h5
                 class="mt-0 text-[20px] font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">
-                AKATE</h5>
+                NOLIT</h5>
         </div>
     </a>
     {{-- menu open --}}

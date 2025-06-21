@@ -13,7 +13,7 @@
                 <h1 class="text-3xl font-bold text-primaryB mb-6">Qui sommes-nous ?</h1>
                 <p class="text-gray-700 text-lg mb-4 leading-[30px]">
                     Chez <span
-                        class="text-[20px] font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">AKATE</span>,
+                        class="text-[20px] font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">NOLIT</span>,
                     nous croyons que le numérique doit être simple, efficace et au service
                     de vos idées. C’est pourquoi nous avons créé une structure dédiée à vous accompagner dans tous vos
                     projets digitaux, que vous soyez une entreprise, une association ou un indépendant.
