@@ -10,7 +10,7 @@
 </style>
 @section('content')
     @php
-        $title = 'Nous contacter';
+        $title = 'CABINET DTECH GROUP - Contactez nous';
     @endphp
     @include('frontend.layout.inc.banner')
     <section class="bg-white min-h-screen py-12">
