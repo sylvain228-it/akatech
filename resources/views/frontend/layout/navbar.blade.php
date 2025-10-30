@@ -1,7 +1,7 @@
 @php
     $navbarItems = [
         //
-        ['title' => 'Accuei', 'route' => 'home'],
+        ['title' => 'Accueil', 'route' => 'home'],
         ['title' => 'A propos', 'route' => 'about'],
         ['title' => 'Services', 'route' => 'services'],
         // ['title' => 'Projets', 'route' => 'projets'],
