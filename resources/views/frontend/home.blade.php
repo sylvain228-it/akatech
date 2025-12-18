@@ -68,7 +68,7 @@
                     plus</a>
             </div>
             <div class="flex flex-col md:flex-row gap-7 w-full lg:col-span-2">
-                <img data-aos="zoom-in" src="{{ asset('default/dev_1.jpg') }}"
+                <img data-aos="zoom-in" src="{{ asset('default/me_about.png') }}"
                     class="rounded-2xl border-t-10 border-l-10 border-primaryB w-full max-h-[400px] object-cover shadow-md"
                     alt="">
                 <div data-aos="zoom-in" class="leading-[30px] flex flex-col">

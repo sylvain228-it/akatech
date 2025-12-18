@@ -8,7 +8,7 @@
     @endphp
     @include('frontend.layout.inc.banner')
     <section class="bg-gray-100 min-h-screen py-12">
-        <div class="md:px-20 px-5 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div class="md:px-20 px-5 grid grid-cols-1 md:grid-cols-2 gap-8 items-start justify-center">
             <div class="order-last md:order-first flex flex-col h-full">
                 <h1 class="text-3xl font-bold text-primaryB mb-6">Qui sommes-nous ?</h1>
                 <p class="text-gray-700 text-lg mb-4 leading-[30px]">
@@ -23,8 +23,9 @@
                 </div>
             </div>
 
-            <div data-aos="zoom-in" class="text-center">
-                <img src="{{ asset('default/web_3.jpg') }}" alt="À propos" class="rounded-xl shadow-md w-full">
+            <div data-aos="zoom-in" class="text-center w-full">
+                <img src="{{ asset('default/me_about.png') }}" alt="À propos"
+                    class="rounded-xl shadow-md max-h-[400px] object-contain">
             </div>
         </div>
 
