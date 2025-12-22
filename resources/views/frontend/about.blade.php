@@ -8,14 +8,14 @@
     @endphp
     @include('frontend.layout.inc.banner')
     <section class="bg-gray-100 min-h-screen py-12">
-        <div class="md:px-20 px-5 grid grid-cols-1 md:grid-cols-2 gap-8 items-start justify-center">
-            <div class="order-last md:order-first flex flex-col h-full">
+        <div class="md:px-20 px-5 grid grid-cols-1 md:grid-cols-2 gap-12 items-start justify-center">
+            <div class="order-last md:order-first flex flex-col h-full w-full">
                 <h1 class="text-3xl font-bold text-primaryB mb-6">Qui sommes-nous ?</h1>
                 <p class="text-gray-700 text-lg mb-4 leading-[30px]">
                     Chez <span
-                        class="text-[20px] font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">NOLIT</span>,
+                        class="text-[20px] font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB uppercase">Cyberita</span>,
                     nous croyons que le numérique doit être simple, efficace et au service
-                    de vos idées. C’est pourquoi nous avons créé une structure dédiée à vous accompagner dans tous vos
+                    de vos idées. C'est pourquoi nous avons créé une structure dédiée à vous accompagner dans tous vos
                     projets digitaux, que vous soyez une entreprise, une association ou un indépendant.
                 </p>
                 <div
@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <div data-aos="zoom-in" class="text-center w-full">
+            <div data-aos="zoom-in" class="text-center w-full md:flex justify-around">
                 <img src="{{ asset('default/me_about.png') }}" alt="À propos"
                     class="rounded-xl shadow-md max-h-[400px] object-contain">
             </div>
@@ -40,7 +40,7 @@
                         sites web
                     </h5>
                     <p>Nous réalisons des sites internet modernes, clairs et adaptés à tous les écrans. Que vous ayez besoin
-                        d’un site vitrine, d’une boutique en ligne ou d’un espace personnalisé, on s’occupe de tout – du
+                        d'un site vitrine, d'une boutique en ligne ou d'un espace personnalisé, on s'occupe de tout – du
                         design
                         à la mise en ligne.</p>
                 </div>
@@ -52,17 +52,17 @@
                         sites web
                     </h5>
                     <p>Nous réalisons des sites internet modernes, clairs et adaptés à tous les écrans. Que vous ayez besoin
-                        d’un site vitrine, d’une boutique en ligne ou d’un espace personnalisé, on s’occupe de tout – du
+                        d'un site vitrine, d'une boutique en ligne ou d'un espace personnalisé, on s'occupe de tout – du
                         design
                         à la mise en ligne.</p>
                 </div>
                 <div
                     class="mb-4 hover:border-3 hover:cursor-default hover:border-primaryB transition-all duration-300 hover:p-3 hover:rounded-2xl">
                     <h5 class="text-xl font-bold mb-2 text-primaryB"><i
-                            class="bi bi-arrow-right-circle text-primaryYe font-bold me-2"></i>Développement d’applications
+                            class="bi bi-arrow-right-circle text-primaryYe font-bold me-2"></i>Développement d'applications
                         web et mobiles
                     </h5>
-                    <p>Vous avez une idée d’application ou vous voulez digitaliser un service ? Nous développons des applis
+                    <p>Vous avez une idée d'application ou vous voulez digitaliser un service ? Nous développons des applis
                         pratiques, rapides et faciles à utiliser, pour le web, Android ou iOS.</p>
                 </div>
                 <div
@@ -72,17 +72,17 @@
                         protection des données
                     </h5>
                     <p>Vos données sont précieuses. On vous aide à les protéger avec des solutions adaptées : sauvegardes,
-                        antivirus, pare-feu, audits de sécurité… Vous travaillez l’esprit tranquille, on veille au reste.
+                        antivirus, pare-feu, audits de sécurité… Vous travaillez l'esprit tranquille, on veille au reste.
                     </p>
                 </div>
                 <div
                     class="mb-4 hover:border-3 hover:cursor-default hover:border-primaryB transition-all duration-300 hover:p-3 hover:rounded-2xl">
                     <h5 class="text-xl font-bold mb-2 text-primaryB"><i
-                            class="bi bi-arrow-right-circle text-primaryYe font-bold me-2"></i>Création d’affiches
+                            class="bi bi-arrow-right-circle text-primaryYe font-bold me-2"></i>Création d'affiches
                         publicitaires & visuels
                     </h5>
                     <p>Vous avez besoin de flyers, affiches, bannières ou contenus visuels pour vos réseaux ? On vous
-                        propose des créations originales et percutantes, prêtes à capter l’attention.
+                        propose des créations originales et percutantes, prêtes à capter l'attention.
                     </p>
                 </div>
             </div>
@@ -92,12 +92,12 @@
                 <h3 class="text-2xl font-bold mb-2 text-primaryB">Pourquoi nous choisir ?</h3>
                 <div class="flex gap-2 items-start">
                     <i class="bi bi-check-circle text-primaryYe font-bold text-xl"></i>
-                    <p class="leading-[28px] mb-2">Parce qu’on aime ce qu’on fait, et qu’on le fait bien. On vous écoute,
+                    <p class="leading-[28px] mb-2">Parce qu'on aime ce qu'on fait, et qu'on le fait bien. On vous écoute,
                         on
                         vous
                         conseille, et surtout, on
                         vous livre des résultats concrets.
-                        Votre projet mérite d’être bien fait, et c’est exactement ce qu’on vous propose.
+                        Votre projet mérite d'être bien fait, et c'est exactement ce qu'on vous propose.
                     </p>
                 </div>
                 <div class="flex gap-2 items-start">

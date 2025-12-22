@@ -26,8 +26,8 @@
                     </div>
                 </div>
                 <h1 class="text-3xl font-bold mb-2 text-center">Prenez contact avec nous sans hésitation.</h1>
-                <p class="text-gray-700 mb-6 text-center">Chez nous, l’informatique n’est pas qu’une question de technologie,
-                    c’est avant tout une affaire de service.</p>
+                <p class="text-gray-700 mb-6 text-center">Chez nous, l'informatique n'est pas qu'une question de technologie,
+                    c'est avant tout une affaire de service.</p>
 
                 <form class="bg-gray-100 p-6 rounded-xl shadow-md space-y-5" id="contactForm" method="POST">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-7">

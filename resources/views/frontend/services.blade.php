@@ -22,24 +22,24 @@
                     <div class="w-10 h-1 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
                     </div>
                     <h5 class="text-[15px] text-primaryB uppercase font-medium">Avec nous,
-                        vos projets prennent la voie de l’excellence.
+                        vos projets prennent la voie de l'excellence.
                     </h5>
                     <div class="w-10 h-1 bg-gradient-to-r from-primaryB from-10% via-10% via-white to-primaryB to-80%">
                     </div>
                 </div>
                 <h1 class="text-4xl font-bold mb-4 text-center leading-12">Pourquoi <span
                         class=" text-primaryB font-bold">nos
-                        solutions séduisent-elles</span> autant d’entreprises
+                        solutions séduisent-elles</span> autant d'entreprises
                     ?</h1>
                 <div class="flex gap-3 items-start mb-3">
                     <div class="w-3 h-20 bg-primaryYe"></div>
                     <div>
                         <p class="text-gray-700 leading-8">Nous proposons un éventail complet de services, allant
-                            de l’intégration de systèmes à la conception et au développement de sites web, en passant par le
+                            de l'intégration de systèmes à la conception et au développement de sites web, en passant par le
                             community management et la création de supports de communication.
                         </p>
                         <p class="text-gray-700 leading-8 mt-2">Notre équipe pluridisciplinaire, composée de
-                            collaborateurs permanents et de consultants experts dans différents domaines de l’informatique,
+                            collaborateurs permanents et de consultants experts dans différents domaines de l'informatique,
                             est mobilisée pour répondre avec précision à vos besoins spécifiques.
                         </p>
                     </div>
@@ -74,7 +74,7 @@
                     class="sevss shadow-md rounded-[16px] cursor-pointer transition duration-300 transform">
                     <div class="ser-overlay flex flex-col">
                         <div class="caption mt-auto text-white transition-all duration-300">
-                            <h3 class="uppercase text-[16px] text-white mb-4">Aka Technologies</h3>
+                            <h3 class="uppercase text-[16px] text-white mb-4">Cyberita Technologies</h3>
                             <h2 class=" capitalize text-2xl font-bold">
                                 {{ substr($item->title, 0, 40) }}{{ strlen($item->title) > 40 ? '...' : '' }}
                             </h2>

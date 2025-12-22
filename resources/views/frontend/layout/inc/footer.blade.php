@@ -20,8 +20,8 @@
                     <div>
 
                         <h5
-                            class="mt-0 text-xl font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">
-                            NOLIT</h5>
+                            class="mt-0 text-xl uppercase font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">
+                            Cyberita</h5>
                         <h3
                             class="text-xl font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryB to-primaryYe">
                             Technologies</h3>
@@ -29,7 +29,7 @@
                 </div>
 
             </a>
-            <p class="mt-2">Plus de 4 ans d’expertise en cybersécurité et développement web & mobile : nous
+            <p class="mt-2">Plus de 4 ans d'expertise en cybersécurité et développement web & mobile : nous
                 transformons vos besoins
                 en solutions sur mesure.</p>
             <div class="flex gap-4 mt-3 network">
@@ -88,9 +88,10 @@
         </div>
     </div>
     <div class="text-center bg-gris2 flex items-center justify-center py-3">
-        <p class="text-center text-gray-300 text-[12px]">Copyright@ <b class="uppercase">NOLIT Technologies</b> -
+        <p class="text-center text-gray-300 text-[12px]">Copyright@ <b class="uppercase">Cyberita Technologies</b> -
             <i>Tout
                 droit réservé</i> |
-            {{ date('d-m-Y') }}</p>
+            {{ date('d-m-Y') }}
+        </p>
     </div>
 </div>
