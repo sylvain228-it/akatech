@@ -73,7 +73,7 @@
                     alt="">
                 <div data-aos="zoom-in" class="leading-[30px] flex flex-col">
                     <p class="tracking-wider mb-4">Chez <span
-                            class="text-[20px] font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB uppercase">Cyberita</span>,
+                            class="text-[20px] font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB uppercase">Waria</span>,
                         pas de solutions toutes faites, ni de réponses préconçues ou de forfaits figés.</p>
                     <p class="mb-4 tracking-wider">Il y a d'abord vous : votre activité, votre environnement informatique,
                         et
@@ -117,7 +117,7 @@
                     class="sevss shadow-md rounded-[16px] cursor-pointer transition duration-300 transform">
                     <div class="ser-overlay flex flex-col">
                         <div class="caption mt-auto text-white transition-all duration-300">
-                            <h3 class="uppercase text-[16px] text-white mb-4">Cyberita Technologies</h3>
+                            <h3 class="uppercase text-[16px] text-white mb-4">Waria Technologies</h3>
                             <h2 class=" capitalize text-2xl font-bold">
                                 {{ substr($item->title, 0, 40) }}{{ strlen($item->title) > 40 ? '...' : '' }}
                             </h2>

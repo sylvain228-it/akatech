@@ -74,7 +74,7 @@
                     class="sevss shadow-md rounded-[16px] cursor-pointer transition duration-300 transform">
                     <div class="ser-overlay flex flex-col">
                         <div class="caption mt-auto text-white transition-all duration-300">
-                            <h3 class="uppercase text-[16px] text-white mb-4">Cyberita Technologies</h3>
+                            <h3 class="uppercase text-[16px] text-white mb-4">Waria Technologies</h3>
                             <h2 class=" capitalize text-2xl font-bold">
                                 {{ substr($item->title, 0, 40) }}{{ strlen($item->title) > 40 ? '...' : '' }}
                             </h2>

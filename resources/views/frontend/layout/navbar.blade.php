@@ -21,7 +21,7 @@
 
             <h5
                 class="mt-0 text-[20px] uppercase font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">
-                Cyberita</h5>
+                Waria</h5>
         </div>
     </a>
     {{-- menu open --}}

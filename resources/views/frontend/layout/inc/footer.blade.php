@@ -21,7 +21,7 @@
 
                         <h5
                             class="mt-0 text-xl uppercase font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryYe to-primaryB">
-                            Cyberita</h5>
+                            Waria</h5>
                         <h3
                             class="text-xl font-bold mb-0 bg-gradient-to-r bg-clip-text text-transparent from-primaryB to-primaryYe">
                             Technologies</h3>
@@ -88,7 +88,7 @@
         </div>
     </div>
     <div class="text-center bg-gris2 flex items-center justify-center py-3">
-        <p class="text-center text-gray-300 text-[12px]">Copyright@ <b class="uppercase">Cyberita Technologies</b> -
+        <p class="text-center text-gray-300 text-[12px]">Copyright@ <b class="uppercase">Waria Technologies</b> -
             <i>Tout
                 droit réservé</i> |
             {{ date('d-m-Y') }}
